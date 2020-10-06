@@ -1,6 +1,118 @@
 @import 'global';
-@import 'mixins';
-@import 'font-properties';
 @import 'colors';
+@import 'mixins';
+@import 'components';
+@import 'font-properties';
+
+html {
+	position: relative;
+	max-width: 1920px;
+	min-height: 768px;
+	height: 100%;
+	margin: auto;
+}
 
 // Header
+.header-container {
+	width: 100%;
+
+	.header-bg {
+		position: relative;
+		width: 100%;
+		height: 768px;
+		z-index: 0;
+
+		background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+			url('../imgs/banner-min.jpg');
+		background-size: cover;
+		background-attachment: fixed;
+
+		// Nav
+		nav {
+			display: flex;
+			width: 71%;
+			margin: auto;
+			padding-top: 20px;
+			justify-content: space-between;
+			align-items: center;
+
+			ul {
+				display: flex;
+				li {
+					list-style: none;
+					padding: 0px 50px;
+
+					a {
+						color: $off-white;
+						text-transform: uppercase;
+						text-decoration: none;
+
+						&:visited {
+							color: $off-white;
+						}
+					}
+				}
+			}
+			img {
+				cursor: pointer;
+			}
+		} //End of Nav
+
+		.header-content {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			text-align: center;
+
+			h1 {
+				color: $off-white;
+				padding: 15px;
+				font-size: $Heading-Large;
+			}
+		}
+	} //End of Header bg
+
+	//Service Cards Section
+	.service_cards-container {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 100px;
+		width: 100%;
+
+		margin-top: -150px;
+		margin-bottom: 90px;
+	}
+} //End of header container
+
+// Other Services
+.other_services-container {
+	width: 100%;
+	margin: 90px auto;
+	h1 {
+		font-size: $Heading-Big;
+		text-align: center;
+
+		width: 80%;
+		padding: 15px 0px;
+		margin: auto;
+		margin-bottom: 50px;
+
+		background-color: $yellow-orange;
+		color: $off-white;
+	}
+
+	// Sub-Services
+	.sub_services-container {
+		display: flex;
+		flex-wrap: wrap;
+
+		width: 71%;
+		margin: auto;
+
+		justify-content: space-between;
+		gap: 20px 30px;
+	}
+}

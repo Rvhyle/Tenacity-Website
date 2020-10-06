@@ -1,0 +1,46 @@
+@import 'font-properties';
+@import 'colors';
+
+// Service Cards
+.service-cards {
+	z-index: 1;
+	width: 320px;
+	height: 450px;
+	background-color: $black;
+
+	color: $off-white;
+
+	.service-content {
+		width: 100%;
+		padding: 10px;
+		text-align: center;
+
+		h2 {
+			font-size: $Heading-Big;
+		}
+		p {
+			padding-top: 20px;
+			width: 95%;
+		}
+	}
+}
+
+// Sub-Service Containers
+.sub-service {
+	position: relative;
+	width: 320px;
+	height: 75px;
+
+	background-color: $black;
+	color: $off-white;
+
+	h3 {
+		position: absolute;
+		text-align: center;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		font-size: 1.2rem;
+	}
+}
