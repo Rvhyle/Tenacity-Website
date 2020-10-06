@@ -1,5 +1,15 @@
+@import 'font-properties';
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+
+	font-family: $Heebo;
+}
+
+h1,
+h2,
+h3 {
+	text-transform: uppercase;
 }
