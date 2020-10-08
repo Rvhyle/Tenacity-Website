@@ -58,9 +58,8 @@ body {
 html {
   position: relative;
   max-width: 1920px;
-  min-height: 768px;
-  height: 100%;
   margin: auto;
+  border: 2px solid rgba(0, 0, 0, 0.048);
 }
 
 .header-container {
@@ -141,7 +140,7 @@ html {
 .other_services-container h1 {
   font-size: 1.875rem;
   text-align: center;
-  width: 80%;
+  width: 71%;
   padding: 15px 0px;
   margin: auto;
   margin-bottom: 50px;
@@ -155,5 +154,62 @@ html {
   width: 71%;
   margin: auto;
   justify-content: space-between;
-  gap: 20px 30px;
+  gap: 20px 10px;
+}
+
+.testimonial-container {
+  position: relative;
+  width: 100%;
+  height: 965px;
+  background-color: #f0a500;
+}
+
+.testimonial-container .testimonial_cards-container {
+  position: absolute;
+  justify-content: space-between;
+  width: 71%;
+  height: 580px;
+  background-color: #1a1c20;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-x: hidden;
+}
+
+.testimonial-container .testimonial_cards-container #t-bg {
+  position: absolute;
+  z-index: 0;
+  display: inline-block;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+
+.testimonial-container .testimonial_cards-container .cards-container .testimonial-cards {
+  position: absolute;
+  width: 70%;
+  height: 350px;
+  text-align: center;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.testimonial-container .testimonial_cards-container .t-nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: calc(580px / 2);
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.testimonial-container .testimonial_cards-container .t-nav button {
+  background-color: transparent;
+  border: none;
+}
+
+.testimonial-container .testimonial_cards-container .t-nav .arrow {
+  background-color: #f0a500;
 }

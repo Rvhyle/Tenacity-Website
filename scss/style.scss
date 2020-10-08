@@ -7,9 +7,8 @@
 html {
 	position: relative;
 	max-width: 1920px;
-	min-height: 768px;
-	height: 100%;
 	margin: auto;
+	border: 2px solid rgba(0, 0, 0, 0.048);
 }
 
 // Header
@@ -95,7 +94,7 @@ html {
 		font-size: $Heading-Big;
 		text-align: center;
 
-		width: 80%;
+		width: 71%;
 		padding: 15px 0px;
 		margin: auto;
 		margin-bottom: 50px;
@@ -113,6 +112,68 @@ html {
 		margin: auto;
 
 		justify-content: space-between;
-		gap: 20px 30px;
+		gap: 20px 10px;
+	}
+}
+
+// Testimonials
+.testimonial-container {
+	position: relative;
+	width: 100%;
+	height: 965px;
+	background-color: $yellow-orange;
+
+	.testimonial_cards-container {
+		position: absolute;
+		justify-content: space-between;
+		width: 71%;
+		height: 580px;
+		background-color: $black;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		overflow-x: hidden;
+		// SVG Background
+		#t-bg {
+			position: absolute;
+			z-index: 0;
+			display: inline-block;
+			height: 100%;
+			right: 0;
+			top: 0;
+		}
+
+		.cards-container {
+			.testimonial-cards {
+				position: absolute;
+				width: 70%;
+				height: 350px;
+				text-align: center;
+				background-color: white;
+
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		.t-nav {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			padding-top: calc(580px / 2);
+			padding-left: 50px;
+			padding-right: 50px;
+
+			button {
+				background-color: transparent;
+				border: none;
+			}
+
+			.arrow {
+				background-color: $yellow-orange;
+			}
+		}
 	}
 }
