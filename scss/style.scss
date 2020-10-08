@@ -8,7 +8,6 @@ html {
 	position: relative;
 	max-width: 1920px;
 	margin: auto;
-	border: 2px solid rgba(0, 0, 0, 0.048);
 }
 
 // Header
@@ -109,6 +108,7 @@ html {
 		flex-wrap: wrap;
 
 		width: 71%;
+		max-width: 100%;
 		margin: auto;
 
 		justify-content: space-between;
@@ -126,7 +126,7 @@ html {
 	.testimonial_cards-container {
 		position: absolute;
 		justify-content: space-between;
-		width: 71%;
+		min-width: 71%;
 		height: 580px;
 		background-color: $black;
 		top: 50%;
@@ -166,14 +166,36 @@ html {
 			padding-left: 50px;
 			padding-right: 50px;
 
-			button {
+			.slyde__arrow {
 				background-color: transparent;
 				border: none;
+				cursor: pointer;
 			}
 
 			.arrow {
-				background-color: $yellow-orange;
+				fill: $yellow-orange;
+				width: 30px;
+				height: 30px;
 			}
 		}
+	}
+}
+
+// Slyder Styles
+.inactive {
+	opacity: 0%;
+}
+
+.active {
+	opacity: 100%;
+	animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0%;
+	}
+	to {
+		opacity: 100%;
 	}
 }

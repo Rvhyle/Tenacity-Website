@@ -59,7 +59,6 @@ html {
   position: relative;
   max-width: 1920px;
   margin: auto;
-  border: 2px solid rgba(0, 0, 0, 0.048);
 }
 
 .header-container {
@@ -152,6 +151,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   width: 71%;
+  max-width: 100%;
   margin: auto;
   justify-content: space-between;
   gap: 20px 10px;
@@ -167,7 +167,7 @@ html {
 .testimonial-container .testimonial_cards-container {
   position: absolute;
   justify-content: space-between;
-  width: 71%;
+  min-width: 71%;
   height: 580px;
   background-color: #1a1c20;
   top: 50%;
@@ -205,11 +205,32 @@ html {
   padding-right: 50px;
 }
 
-.testimonial-container .testimonial_cards-container .t-nav button {
+.testimonial-container .testimonial_cards-container .t-nav .slyde__arrow {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .testimonial-container .testimonial_cards-container .t-nav .arrow {
-  background-color: #f0a500;
+  fill: #f0a500;
+  width: 30px;
+  height: 30px;
+}
+
+.inactive {
+  opacity: 0%;
+}
+
+.active {
+  opacity: 100%;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
 }
