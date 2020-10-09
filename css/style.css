@@ -161,6 +161,7 @@ html {
   position: relative;
   width: 100%;
   height: 965px;
+  margin-bottom: 90px;
   background-color: #f0a500;
 }
 
@@ -231,11 +232,12 @@ html {
 
 .inactive {
   opacity: 0%;
+  animation: fadeOut 2s;
 }
 
 .active {
   opacity: 100%;
-  animation: fadeIn 1s;
+  animation: fadeIn 2s;
 }
 
 @keyframes fadeIn {
@@ -244,5 +246,14 @@ html {
   }
   to {
     opacity: 100%;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
   }
 }

@@ -34,4 +34,4 @@ function getPrev() {
 }
 
 // AutoPlay
-setInterval(getNext,4500)
+setInterval(getNext,5000)
