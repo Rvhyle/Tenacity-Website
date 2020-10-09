@@ -191,9 +191,21 @@ html {
   height: 350px;
   text-align: center;
   background-color: white;
+  border: 1px solid #1a1c20;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.testimonial-container .testimonial_cards-container .cards-container .testimonial-cards .client-quote {
+  padding-top: 100px;
+  width: 90%;
+  margin: auto;
+  text-transform: uppercase;
+}
+
+.testimonial-container .testimonial_cards-container .cards-container .testimonial-cards span {
+  opacity: 50%;
 }
 
 .testimonial-container .testimonial_cards-container .t-nav {

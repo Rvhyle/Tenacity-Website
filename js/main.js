@@ -10,29 +10,28 @@ buttons[0].addEventListener('click', getPrev);
 // Right Arrow
 buttons[1].addEventListener('click', getNext);
 
-// Functions for event listener call backs
-
-// FixMe: When active gets to 5, it should reset back to 0
 function getNext() {
-	// toggle inactive for current slide
+	// Get rid of active class
 	slyderArray[active].classList.toggle('active');
 	slyderArray[active].classList.toggle('inactive');
-	active++;
-	// toggle active for next slide
-	slyderArray[active].classList.toggle('active');
+	active = ++active % slyderArray.length;
+	// Add active class
 	slyderArray[active].classList.toggle('inactive');
-
-	console.log(active);
+	slyderArray[active].classList.toggle('active');
 }
 
 function getPrev() {
-	// toggle inactive for current slide
+	if(active == 0) {
+		return 0;
+	}
+	// Get rid of active class
 	slyderArray[active].classList.toggle('active');
 	slyderArray[active].classList.toggle('inactive');
-	active--;
-	// toggle active for next slide
-	slyderArray[active].classList.toggle('active');
+	active = --active % slyderArray.length;
+	// Add active class
 	slyderArray[active].classList.toggle('inactive');
-
-	console.log(active);
+	slyderArray[active].classList.toggle('active');
 }
+
+// AutoPlay
+setInterval(getNext,4500)
