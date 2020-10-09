@@ -1,6 +1,6 @@
 @import 'global';
+@import 'media-queries';
 @import 'colors';
-@import 'mixins';
 @import 'components';
 @import 'font-properties';
 
@@ -9,6 +9,7 @@ html {
 	max-width: 1920px;
 	margin: auto;
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 // Header
@@ -55,6 +56,15 @@ html {
 			img {
 				cursor: pointer;
 			}
+
+			#menu {
+				fill: $off-white;
+				width: 40px;
+				height: 40px;
+				cursor: pointer;
+
+				display: none;
+			}
 		} //End of Nav
 
 		.header-content {
@@ -69,6 +79,16 @@ html {
 				color: $off-white;
 				padding: 15px;
 				font-size: $Heading-Large;
+			}
+
+			button {
+				background-color: transparent;
+				border: 2px solid $brown;
+				padding: 10px 20px;
+
+				color: $off-white;
+				cursor: pointer;
+				text-transform: uppercase;
 			}
 		}
 	} //End of Header bg
@@ -127,7 +147,8 @@ html {
 	.testimonial_cards-container {
 		position: absolute;
 		justify-content: space-between;
-		min-width: 71%;
+		width: 100%;
+		max-width: 1320px;
 		// padding: 150px;
 		height: 70%;
 		background-color: $black;
@@ -150,9 +171,9 @@ html {
 			.testimonial-cards {
 				position: absolute;
 				padding: 30px;
-				width: 95%;
-				// height: 70%;
-				// height: 350px;
+				width: 100%;
+				max-width: 800px;
+
 				text-align: center;
 				background-color: white;
 				// border: 1px solid $black;
@@ -180,6 +201,7 @@ html {
 	position: absolute;
 	width: 90%;
 	margin: auto;
+	z-index: 5;
 
 	top: 50%;
 	left: 50%;
@@ -210,6 +232,7 @@ html {
 
 	.contact-info {
 		position: absolute;
+		width: 100%;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
@@ -264,6 +287,8 @@ html {
 			width: 450px;
 			height: 600px;
 			object-fit: cover;
+
+			border: 1px solid $black;
 		}
 	}
 }
