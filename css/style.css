@@ -59,6 +59,7 @@ html {
   position: relative;
   max-width: 1920px;
   margin: auto;
+  overflow-x: hidden;
 }
 
 .header-container {
@@ -168,7 +169,7 @@ html {
   position: absolute;
   justify-content: space-between;
   min-width: 71%;
-  height: 580px;
+  height: 70%;
   background-color: #1a1c20;
   top: 50%;
   left: 50%;
@@ -187,18 +188,16 @@ html {
 
 .testimonial-container .testimonial_cards-container .cards-container .testimonial-cards {
   position: absolute;
-  width: 70%;
-  height: 350px;
+  padding: 30px;
+  width: 95%;
   text-align: center;
   background-color: white;
-  border: 1px solid #1a1c20;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .testimonial-container .testimonial_cards-container .cards-container .testimonial-cards .client-quote {
-  padding-top: 100px;
   width: 90%;
   margin: auto;
   text-transform: uppercase;
@@ -208,25 +207,88 @@ html {
   opacity: 50%;
 }
 
-.testimonial-container .testimonial_cards-container .t-nav {
-  position: relative;
+.t-nav {
+  position: absolute;
+  width: 90%;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: space-between;
-  padding-top: calc(580px / 2);
-  padding-left: 50px;
-  padding-right: 50px;
 }
 
-.testimonial-container .testimonial_cards-container .t-nav .slyde__arrow {
+.t-nav .slyde__arrow {
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
-.testimonial-container .testimonial_cards-container .t-nav .arrow {
-  fill: #f0a500;
+.t-nav .arrow {
+  fill: #1a1c20;
   width: 30px;
   height: 30px;
+}
+
+#contact-us {
+  position: relative;
+  width: 100%;
+  height: 965px;
+  background-color: #1a1c20;
+  color: #f4f4f4;
+}
+
+#contact-us .contact-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#contact-us .contact-info h3 {
+  font-size: 3rem;
+}
+
+#contact-us .contact-info .phone {
+  fill: #f4f4f4;
+  width: 50px;
+  height: auto;
+}
+
+#contact-us .contact-info h2 {
+  font-size: 3rem;
+  padding-bottom: 50px;
+}
+
+.prompt-banner {
+  position: relative;
+  width: 100%;
+  padding: 200px 0px;
+  text-align: center;
+  background-image: linear-gradient(rgba(240, 164, 0, 0.77), rgba(240, 164, 0, 0.77)), url("../imgs/wood-bg-min.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.prompt-banner .banner-imgs {
+  position: relative;
+  width: 100%;
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 200px;
+}
+
+.prompt-banner .banner-imgs h2 {
+  font-size: 2.5rem;
+}
+
+.prompt-banner .banner-imgs img {
+  width: 450px;
+  height: 600px;
+  object-fit: cover;
 }
 
 .inactive {
