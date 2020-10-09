@@ -44,3 +44,31 @@
 		font-size: 1.2rem;
 	}
 }
+
+.cards-container {
+	.testimonial-cards {
+		position: absolute;
+		padding: 30px;
+		width: 100%;
+		max-width: 800px;
+
+		text-align: center;
+		background-color: white;
+		// border: 1px solid $black;
+
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		.client-quote {
+			width: 90%;
+			margin: auto;
+
+			text-transform: uppercase;
+		}
+
+		span {
+			opacity: 50%;
+		}
+	}
+}

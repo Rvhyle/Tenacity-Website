@@ -1,6 +1,6 @@
 @import 'global';
+@import 'media-queries';
 @import 'colors';
-@import 'mixins';
 @import 'components';
 @import 'font-properties';
 
@@ -8,6 +8,8 @@ html {
 	position: relative;
 	max-width: 1920px;
 	margin: auto;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 // Header
@@ -54,6 +56,15 @@ html {
 			img {
 				cursor: pointer;
 			}
+
+			#menu {
+				fill: $off-white;
+				width: 40px;
+				height: 40px;
+				cursor: pointer;
+
+				display: none;
+			}
 		} //End of Nav
 
 		.header-content {
@@ -68,6 +79,16 @@ html {
 				color: $off-white;
 				padding: 15px;
 				font-size: $Heading-Large;
+			}
+
+			button {
+				background-color: transparent;
+				border: 2px solid $brown;
+				padding: 10px 20px;
+
+				color: $off-white;
+				cursor: pointer;
+				text-transform: uppercase;
 			}
 		}
 	} //End of Header bg
@@ -127,8 +148,10 @@ html {
 	.testimonial_cards-container {
 		position: absolute;
 		justify-content: space-between;
-		min-width: 71%;
-		height: 580px;
+		width: 100%;
+		max-width: 1320px;
+		// padding: 150px;
+		height: 70%;
 		background-color: $black;
 		top: 50%;
 		left: 50%;
@@ -144,66 +167,111 @@ html {
 			right: 0;
 			top: 0;
 		}
+	}
+}
+.t-nav {
+	position: absolute;
+	width: 90%;
+	margin: auto;
+	z-index: 5;
 
-		.cards-container {
-			.testimonial-cards {
-				position: absolute;
-				width: 70%;
-				height: 350px;
-				text-align: center;
-				background-color: white;
-				border: 1px solid $black;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	justify-content: space-between;
 
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
+	.slyde__arrow {
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+	}
 
-				.client-quote {
-					padding-top: 100px;
-					width: 90%;
-					margin: auto;
+	.arrow {
+		fill: $black;
+		width: 30px;
+		height: 30px;
+	}
+}
+// Contact Us
+#contact-us {
+	position: relative;
+	width: 100%;
+	height: 965px;
+	background-color: $black;
 
-					text-transform: uppercase;
-				}
+	color: $off-white;
 
-				span {
-					opacity: 50%;
-				}
-			}
+	.contact-info {
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		text-align: center;
+
+		h3 {
+			font-size: 3rem;
 		}
 
-		.t-nav {
-			position: relative;
-			display: flex;
-			justify-content: space-between;
-			padding-top: calc(580px / 2);
-			padding-left: 50px;
-			padding-right: 50px;
+		.phone {
+			fill: $off-white;
+			width: 50px;
+			height: auto;
+		}
 
-			.slyde__arrow {
-				background-color: transparent;
-				border: none;
-				cursor: pointer;
-			}
-
-			.arrow {
-				fill: $yellow-orange;
-				width: 30px;
-				height: 30px;
-			}
+		h2 {
+			font-size: 3rem;
+			padding-bottom: 50px;
 		}
 	}
 }
+// Banner Prompt
+.prompt-banner {
+	position: relative;
+	width: 100%;
+	padding: 200px 0px;
+	text-align: center;
 
+	background-image: linear-gradient(
+			rgba(240, 164, 0, 0.77),
+			rgba(240, 164, 0, 0.77)
+		),
+		url('../imgs/wood-bg-min.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+
+	.banner-imgs {
+		position: relative;
+		width: 100%;
+		padding-top: 100px;
+
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 200px;
+
+		h2 {
+			font-size: $Heading-Large;
+		}
+		img {
+			width: 450px;
+			height: 600px;
+			object-fit: cover;
+
+			border: 1px solid $black;
+		}
+	}
+}
 // Slyder Styles
 .inactive {
 	opacity: 0%;
-	animation: fadeOut 2s;
 }
 
 .active {
 	opacity: 100%;
-	animation: fadeIn 2s;
+	animation: fadeIn 1.5s;
 }
 
 @keyframes fadeIn {
