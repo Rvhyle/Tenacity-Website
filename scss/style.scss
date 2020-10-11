@@ -204,9 +204,9 @@ html {
 	position: relative;
 	width: 100%;
 	height: 965px;
-	background-color: $black;
+	background-color: $yellow-orange;
 
-	color: $off-white;
+	color: $black;
 
 	.contact-info {
 		position: absolute;
@@ -222,7 +222,7 @@ html {
 		}
 
 		.phone {
-			fill: $off-white;
+			fill: $black;
 			width: 50px;
 			height: auto;
 		}
