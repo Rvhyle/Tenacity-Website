@@ -35,6 +35,3 @@ function getPrev() {
 	slyderArray[active].classList.toggle('inactive');
 	slyderArray[active].classList.toggle('active');
 }
-
-// AutoPlay
-setInterval(getNext,5000)
