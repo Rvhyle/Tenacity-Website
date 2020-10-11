@@ -22,6 +22,9 @@ body {
   #menu {
     display: block !important;
   }
+  .navScroll {
+    border-radius: 50%;
+  }
 }
 
 @media screen and (max-width: 950px) {
@@ -112,7 +115,7 @@ body {
 }
 
 .navScroll {
-  background-color: #f0a400de;
+  background-color: #f0a400c0;
   padding: 10px;
 }
 
@@ -395,6 +398,7 @@ html {
   position: relative;
   width: 100%;
   background-color: #1a1c20;
+  padding-bottom: 100px;
   text-align: center;
 }
 
@@ -409,6 +413,21 @@ html {
   width: 100%;
   gap: 20px;
   justify-content: center;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  background-color: black;
+}
+
+footer h2 {
+  font-size: 0.8rem;
+  padding: 0px 50px;
+  color: rgba(255, 255, 255, 0.205);
 }
 
 .inactive {
