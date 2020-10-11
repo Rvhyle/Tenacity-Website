@@ -1,3 +1,5 @@
+@import 'colors';
+
 // Tablet
 @media screen and (max-width: 960px) {
 	// Navigation
@@ -12,8 +14,14 @@
 	.navScroll {
 		border-radius: 50%;
 	}
+
+	.prompt-banner {
+		background-image: linear-gradient(#f0a4007c, #f0a4007c),
+			url('../imgs/projects/gallery2-min.jpg') !important;
+	}
 }
 
+// Desktop
 @media screen and (max-width: 950px) {
 	.contact-info {
 		h3 {
@@ -33,5 +41,12 @@
 	.sub_services-container {
 		width: 100% !important;
 		justify-content: center !important;
+	}
+}
+
+// Other
+@media screen and (max-width: 1470px) and (min-width: 920px) {
+	.arrow {
+		fill: $yellow-orange !important;
 	}
 }

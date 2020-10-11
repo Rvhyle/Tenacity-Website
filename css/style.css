@@ -25,6 +25,9 @@ body {
   .navScroll {
     border-radius: 50%;
   }
+  .prompt-banner {
+    background-image: linear-gradient(#f0a4007c, #f0a4007c), url("../imgs/projects/gallery2-min.jpg") !important;
+  }
 }
 
 @media screen and (max-width: 950px) {
@@ -41,6 +44,12 @@ body {
   .sub_services-container {
     width: 100% !important;
     justify-content: center !important;
+  }
+}
+
+@media screen and (max-width: 1470px) and (min-width: 920px) {
+  .arrow {
+    fill: #f0a500 !important;
   }
 }
 
