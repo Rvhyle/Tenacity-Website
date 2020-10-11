@@ -39,7 +39,13 @@ body {
   .project-img img {
     width: 300px !important;
     height: 300px !important;
-    object-fit: cover;
+    object-fit: cover !important;
+  }
+  .sub-service {
+    margin-bottom: 20px !important;
+  }
+  .service-cards {
+    margin-bottom: 20px !important;
   }
 }
 
