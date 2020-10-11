@@ -20,7 +20,6 @@ html {
 		position: relative;
 		width: 100%;
 		height: 768px;
-		z-index: 0;
 
 		background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
 			url('../imgs/banner-min.jpg');
@@ -29,12 +28,17 @@ html {
 
 		// Nav
 		nav {
+			position: fixed;
 			display: flex;
 			width: 71%;
 			margin: auto;
 			padding-top: 20px;
 			justify-content: space-between;
 			align-items: center;
+
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 1;
 
 			ul {
 				display: flex;
@@ -81,14 +85,16 @@ html {
 				font-size: $Heading-Large;
 			}
 
-			button {
+			a {
 				background-color: transparent;
 				border: 2px solid $brown;
 				padding: 10px 20px;
+				text-decoration: none;
 
 				color: $off-white;
 				cursor: pointer;
 				text-transform: uppercase;
+				font-size: 0.8rem;
 			}
 		}
 	} //End of Header bg
@@ -110,6 +116,7 @@ html {
 .other_services-container {
 	width: 100%;
 	margin: 90px auto;
+
 	h1 {
 		font-size: $Heading-Big;
 		text-align: center;
@@ -142,7 +149,6 @@ html {
 	position: relative;
 	width: 100%;
 	height: 965px;
-	margin-bottom: 90px;
 	background-color: $yellow-orange;
 
 	.testimonial_cards-container {
@@ -231,40 +237,46 @@ html {
 .prompt-banner {
 	position: relative;
 	width: 100%;
-	padding: 200px 0px;
+	height: 900px;
 	text-align: center;
 
-	background-image: linear-gradient(
-			rgba(240, 164, 0, 0.77),
-			rgba(240, 164, 0, 0.77)
-		),
-		url('../imgs/wood-bg-min.jpg');
+	background-image: linear-gradient(#f0a4007c, #f0a4007c),
+		url('../imgs/showcase-min.jpg');
 	background-size: cover;
-	background-attachment: fixed;
 
-	.banner-imgs {
-		position: relative;
-		width: 100%;
-		padding-top: 100px;
+	h2 {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
-		gap: 200px;
-
-		h2 {
-			font-size: $Heading-Large;
-		}
-		img {
-			width: 450px;
-			height: 600px;
-			object-fit: cover;
-
-			border: 1px solid $black;
-		}
+		font-size: 4rem;
+		color: $off-white;
 	}
 }
-// Slyder Styles
+// Projects
+#projects {
+	position: relative;
+	width: 100%;
+	// height: 965px;
+	background-color: $black;
+	text-align: center;
+
+	h1 {
+		color: $off-white;
+		padding: 100px 0px;
+	}
+
+	.projects-container {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+
+		gap: 20px;
+		justify-content: center;
+	}
+}
+// Animations
 .inactive {
 	opacity: 0%;
 }
