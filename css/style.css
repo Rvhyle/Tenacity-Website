@@ -35,6 +35,7 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../imgs/banner-mobile-min.jpg") !important;
     background-size: cover !important;
     background-attachment: fixed !important;
+    background-position: center !important;
   }
   .project-img img {
     width: 300px !important;
