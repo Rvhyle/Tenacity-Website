@@ -21,6 +21,17 @@
 	}
 }
 
+// Mobile
+@media screen and (max-width: 650px) {
+	.header-bg {
+		background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+			url('../imgs/banner-mobile-min.jpg') !important;
+
+		background-size: cover !important;
+		background-attachment: fixed !important;
+	}
+}
+
 // Desktop
 @media screen and (max-width: 950px) {
 	.contact-info {
