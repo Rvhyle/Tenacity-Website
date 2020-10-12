@@ -283,6 +283,24 @@ html {
   font-size: 0.8rem;
 }
 
+.header-container .header-bg .header-content #locations {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container .header-bg .header-content #locations svg {
+  fill: #cf7500;
+  width: 25px;
+  height: 25px;
+}
+
+.header-container .header-bg .header-content #locations h2 {
+  color: #f4f4f4;
+  font-size: 1rem;
+}
+
 .header-container .service_cards-container {
   display: flex;
   justify-content: center;
