@@ -1,20 +1,12 @@
-@import 'font-properties';
-@import 'colors';
-
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-
-	font-family: $Heebo;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
 }
 
-h1,
-h2,
-h3 {
-	text-transform: uppercase;
-}
-
-body {
-	background-color: $off-white;
+html {
+  scroll-behavior: smooth;
+  max-width: 1920px;
+  margin: 0 auto;
 }
